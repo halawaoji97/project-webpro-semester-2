@@ -43,9 +43,9 @@
                     complete and comfortable? <br>
                     do not worry we have provided it for you
                 </p>
-                <button type="button">
-                    Show Me
-                </button>
+                <div class="show-me">
+                    <a href="#mainContent" id="show-me">Show Me</a>
+                </div>
             </div>
             <div class="image-hero">
                 <img src="./images/hero.jpg" alt="AsRog">
@@ -149,7 +149,8 @@
                             <a href="./detail/pluit.html">Detail</a>
                         </div>
                         <div class="chat">
-                            <a href="https://wa.me/+6281357632239?text=Halo, Apakah masih ada kamar kosong?" target="_blank" rel="noopener noreferrer">Book Now</a>
+                            <a href="https://wa.me/+6281357632239?text=Halo, Apakah masih ada kamar kosong?"
+                                target="_blank" rel="noopener noreferrer">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -161,24 +162,37 @@
     <!-- akhir main content -->
 
     <!-- footer -->
-        <footer>
-            <div class="list-footer">
-                <h1 class="brand">
-                  <a href="/">AsRog</a>
-                </h1>
-                  <ul>
-                  <li><a href="#">Developer</a></li>
-                  <li><a href="#">Privacy policy</a></li>
-                  <li><a href="#">Terms & condition</a></li>
-                  </ul>
-                </div>
-              <div class="copyright">
-                <p>Copyright &copy; 2021 - All right reserved</p>
-              </div>
-        </footer>
+    <footer>
+        <div class="list-footer">
+            <h1 class="brand">
+                <a href="/">AsRog</a>
+            </h1>
+            <ul>
+                <li><a href="#">Developer</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms & condition</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2021 - All right reserved</p>
+        </div>
+    </footer>
     <!-- akhir footer -->
 
     <script src="./index.js"></script>
+    <script>
+        const btn = document.querySelector('#show-me');
+        btn.addEventListener('click', smoothScroll);
+
+        function smoothScroll(e) {
+            e.preventDefault();
+
+            window.scrollTo({
+                top: 600,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 
 </html>
